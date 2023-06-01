@@ -1,19 +1,20 @@
-def idades_meio (idades):
-    maior = max(idades)
+# dona monica
 
-    idades.remove(maior)
+'''
+ a soma das idades dos seus três filhos é igual à idade dela
 
-    if idades[0] > idades[1]:
-        meio = idades[0]
-    else:
-        meio = idades[1]
+ a idade do filho mais velho
 
-    return meio
+'''
+dona_monica = int(input())
 
-idades = []
+lista_idades = []
 
-for i in range(3):
-    idade = int(input())
-    idades.append(idade) 
+for i in range(2):
+    lista_idades.append(int(input()))
 
-print(idades_meio(idades))
+lista_idades.append(dona_monica - sum(lista_idades))
+
+filho_mais_velho = max(lista_idades)
+
+print(filho_mais_velho)
